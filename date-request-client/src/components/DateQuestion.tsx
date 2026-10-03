@@ -131,9 +131,9 @@ const DateQuestion = () => {
       ref={cardRef}
       onPointerMove={tilt}
       onPointerLeave={resetTilt}
-      className="gradient-border relative z-10 w-full max-w-xl rounded-[2rem] transition-transform duration-200 ease-out animate-[rise-in_0.9s_ease-out] will-change-transform"
+      className="gradient-border relative z-10 w-full max-w-xl rounded-4xl transition-transform duration-200 ease-out animate-[rise-in_0.9s_ease-out] will-change-transform"
     >
-      <div className="relative flex flex-col items-center gap-9 overflow-hidden rounded-[2rem] bg-[#140a1c]/80 px-6 py-12 text-center backdrop-blur-2xl sm:px-14 sm:py-16">
+      <div className="relative flex flex-col items-center gap-9 overflow-hidden rounded-4xl bg-[#140a1c]/80 px-6 py-12 text-center backdrop-blur-2xl sm:px-14 sm:py-16">
         <div aria-hidden className="card-glare pointer-events-none absolute inset-0" />
 
         <span className="relative rounded-full border border-pink-300/20 bg-pink-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-pink-200/80">
