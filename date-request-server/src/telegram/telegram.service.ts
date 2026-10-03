@@ -49,7 +49,6 @@ export class TelegramService {
       `<b>Відповідь:</b> ${ANSWER_LABELS[body.answer]}`,
     ];
 
-    if (body.name) lines.push(`<b>Імʼя:</b> ${escapeHtml(body.name)}`);
     if (body.date) lines.push(`<b>Дата:</b> ${body.date}`);
     if (body.time) lines.push(`<b>Час:</b> ${body.time}`);
     if (body.place) lines.push(`<b>Місце:</b> ${escapeHtml(body.place)}`);
@@ -57,7 +56,6 @@ export class TelegramService {
       lines.push(`<b>Що робимо:</b> ${ACTIVITY_LABELS[body.activity]}`);
     }
     if (body.wishes) lines.push(`<b>Побажання:</b> ${escapeHtml(body.wishes)}`);
-    if (body.contact) lines.push(`<b>Контакт:</b> ${escapeHtml(body.contact)}`);
 
     return lines.join('\n');
   }

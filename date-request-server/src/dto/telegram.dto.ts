@@ -29,11 +29,6 @@ export class CreateTelegramMessageDto {
   @IsEnum(DateAnswer)
   answer: DateAnswer;
 
-  @IsOptional()
-  @IsString()
-  @MaxLength(50)
-  name?: string;
-
   // Поля нижче обовʼязкові тільки якщо answer === 'yes'
   @ValidateIf(isYes)
   @IsDateString({ strict: true })
@@ -57,9 +52,4 @@ export class CreateTelegramMessageDto {
   @IsString()
   @MaxLength(500)
   wishes?: string;
-
-  @IsOptional()
-  @IsString()
-  @MaxLength(100)
-  contact?: string;
 }
