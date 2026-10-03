@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { TelegramModule } from './telegram/telegram.module.js';
-import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [TelegramModule],
+  imports: [ConfigModule.forRoot({ isGlobal: true }), TelegramModule],
   controllers: [],
   providers: [],
 })
