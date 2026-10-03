@@ -14,11 +14,9 @@ export enum DateActivity {
 
 export interface ITelegramResponse {
   answer: DateAnswer
-  name: string
   date: string
   time: string
   place: string
   activity: DateActivity
   wishes: string
-  contact: string
 }
